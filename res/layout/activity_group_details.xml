@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/common_top_bar_blue"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/common_tab_bg"
+            android:onClick="back" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/mm_title_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+        
+        <ProgressBar 
+            android:id="@+id/progressBar"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="7dp"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f0eb" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical" >
+
+            <!-- <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_style_one"
+                android:onClick="groupChat"
+                android:text="@string/enter_group_chat"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" /> -->
+
+
+            <com.ccxt.whl.widget.ExpandGridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"            
+				android:layout_marginRight="10dp"
+				android:layout_marginBottom="10dp"
+				android:layout_marginTop="13dp"
+                android:background="@drawable/app_pref_bg"
+                android:columnWidth="52dp"
+                android:gravity="start"
+                android:horizontalSpacing="6dp"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:verticalSpacing="10dp" />
+             <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="#E6E6E6" />
+		
+            
+            <RelativeLayout 
+                android:id="@+id/clear_all_history"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="@drawable/btn_bottom_selector"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                
+                ><TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="20dip"
+                    android:gravity="center_vertical|left"
+                    android:text="清空聊天记录"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:typeface="serif" />
+                
+            </RelativeLayout>
+            
+              <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="#E6E6E6" />
+            
+            <Button
+                android:id="@+id/btn_exit_grp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                android:layout_marginTop="11dp"
+                android:paddingBottom="7dp"
+          		android:paddingTop="7dp"
+                android:background="@drawable/btn_style_alert_dialog_special"
+                android:onClick="exitGroup"
+                android:text="退出群聊"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btn_exitdel_grp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                android:paddingBottom="7dp"
+          		android:paddingTop="7dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/btn_style_alert_dialog_special"
+                android:onClick="exitDeleteGroup"
+                android:text="解散群聊"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+            
+            
+            
+            
+      <!--       <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/preference_first_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="@string/receive_group_message"
+                    android:textColor="#333"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/checkbox_bg_selector" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/preference_last_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="@string/message_notification"
+                    android:textColor="#333"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/checkbox_bg_selector" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:background="@drawable/preference_last_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="@string/save_to_contacts"
+                    android:textColor="#333"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/checkbox_bg_selector" />
+            </RelativeLayout> -->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

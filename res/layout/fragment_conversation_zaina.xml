@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/common_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/top_bar_normal_bg"
+        android:gravity="center_vertical" >
+			<LinearLayout  
+			    android:id="@+id/pengpeng"
+			    android:layout_width="45dip"
+			    android:layout_height="match_parent"
+			    android:background="@drawable/common_tab_bg"
+			    android:clickable="true"
+			    android:orientation="horizontal"
+			    android:visibility="gone"  
+			    android:onClick="pengpeng" > 
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center_vertical"
+			        android:layout_marginLeft="11dp"  
+			        android:textColor="#fff" 
+			        android:text="碰碰" />
+			
+			</LinearLayout>
+		<TextView
+            android:id="@+id/message_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+             android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical" 
+            android:text="在哪"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+			
+         <LinearLayout  
+			    android:layout_width="100dip"
+			    android:layout_height="match_parent" 
+			    android:clickable="true"
+			    android:visibility="gone"
+			    android:layout_centerInParent="true"
+			    android:orientation="horizontal"
+			    android:onClick="" > 
+		 <ImageView 
+            android:id="@+id/zaina_icon"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:layout_gravity="center_vertical" 
+	        android:scaleType="centerInside" 
+	        android:src="@drawable/zaina" />
+         <TextView
+            android:id="@+id/message_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_toLeftOf="@id/zaina_icon"
+            android:layout_centerVertical="true"
+            android:text=" "
+            android:textColor="#fff"
+            android:textSize="18sp" /> 
+          
+         <TextView
+            android:id="@+id/message_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/zaina_icon"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical" 
+            android:text="在哪"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+        </LinearLayout>
+        <LinearLayout  
+            android:id="@+id/shaixuan"
+		    android:layout_width="50dip"
+		    android:layout_height="match_parent"
+		    android:background="@drawable/common_tab_bg"
+		    android:clickable="true"
+		    android:orientation="horizontal" 
+		    android:gravity="center_horizontal"
+		    android:layout_alignParentRight="true"
+		    android:onClick="pengpeng" > 
+		      <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical" 
+		        android:layout_marginRight="10dp"  
+		        android:textColor="#2d2d2d" 
+		        android:text="|" />
+	       	 <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical" 
+		        android:layout_marginRight="5dp"  
+		        android:layout_centerVertical="true"
+		        android:textColor="#fff" 
+		        android:text="筛选" />
+		</LinearLayout>
+    </RelativeLayout>
+    
+    <include
+        android:id="@+id/rl_error_item"
+        layout="@layout/chat_neterror_item"
+        android:visibility="gone" />
+ 
+   <!--  <com.ccxt.chat.widget.MsgListView  
+        android:id="@android:id/list"  
+        android:layout_height="wrap_content"  
+        android:layout_width="fill_parent"  
+        android:layout_weight="1.0"  
+        android:drawSelectorOnTop="false"  
+        android:scrollbars="vertical"  
+        android:fadingEdgeLength="0dip"   
+        android:divider="@android:color/black"   
+        android:dividerHeight="1px"  
+        android:cacheColorHint="#00000000"   
+        android:paddingBottom="40dp"/>   -->
+        
+    <me.maxwin.view.XListView
+        android:id="@+id/xListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:dividerHeight="1px"  
+        android:cacheColorHint="#00000000">
+    </me.maxwin.view.XListView>
+ </LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+     android:id="@+id/list_item_layout"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/zaina_avatar_container"
+        android:layout_width="74dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true" >
+
+      <ImageView
+            android:id="@+id/zaina_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_avatar" />
+
+ <!--     <TextView
+            android:id="@+id/unread_msg_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/red_circle"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" /> -->
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/zaina_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/zaina_avatar_container"
+        android:textColor="#000"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/zai_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="6dp"
+        android:textColor="#888888"
+        android:textSize="13sp" /> 
+
+    <TextView
+        android:id="@+id/zaina_sex_state"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" 
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="7dp"
+        android:layout_toRightOf="@id/zaina_avatar_container"
+        android:background="@drawable/textview_boy_style"
+        android:textSize="13sp"
+        android:textColor="@android:color/white"
+        android:text="21"
+        android:gravity="center"
+        />
+    
+      <TextView
+        android:id="@+id/zaina_city"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" 
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="7dp"
+        android:layout_toRightOf="@id/zaina_sex_state" 
+        android:textSize="13sp"
+        android:textColor="#888888"
+        android:text="北京市"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/zaina_message"
+        android:layout_toLeftOf="@id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/zaina_avatar_container"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:padding="7dp"
+        android:textColor="#888888"
+        android:textSize="14sp" />
+
+</RelativeLayout>

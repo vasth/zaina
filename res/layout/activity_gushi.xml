@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/common_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/top_bar_normal_bg"
+        android:gravity="center_vertical" >
+			<LinearLayout  
+			    android:id="@+id/pengpeng"
+			    android:layout_width="45dip"
+			    android:layout_height="match_parent"
+			    android:background="@drawable/common_tab_bg"
+			    android:clickable="true"
+			    android:orientation="horizontal"
+			    android:visibility="gone"  
+			    android:onClick="pengpeng" > 
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center_vertical"
+			        android:layout_marginLeft="11dp"  
+			        android:textColor="#fff" 
+			        android:text="碰碰" />
+			
+			</LinearLayout>
+		<TextView
+            android:id="@+id/message_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical" 
+            android:text="相册"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+		
+		 <LinearLayout  
+            android:id="@+id/fabu_w_gushi"
+		    android:layout_width="80dip"
+		    android:layout_height="match_parent"
+		    android:background="@drawable/common_tab_bg"
+		    android:clickable="true"
+		    android:orientation="horizontal" 
+		    android:gravity="left"
+		    android:layout_alignParentRight="true">
+			     
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical" 
+		        android:layout_marginRight="10dp"  
+		        android:textColor="#2d2d2d" 
+		        android:text="|" />
+	       	 <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical" 
+		        android:layout_marginRight="5dp"  
+		        android:layout_centerVertical="true"
+		        android:textColor="#9e9e9e" 
+		        android:text="上传相册" />
+		</LinearLayout>
+			 
+    </RelativeLayout>
+  
+    <me.maxwin.view.XListView
+        android:id="@+id/user_gushi_xListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:dividerHeight="1px"  
+        android:cacheColorHint="#00000000">
+    </me.maxwin.view.XListView>
+ </LinearLayout>

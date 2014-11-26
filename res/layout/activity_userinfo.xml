@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/top_bar_normal_bg"
+        android:gravity="center_vertical" >
+ <include layout="@layout/commom_back_btn" />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="个人资料"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+        
+         <LinearLayout  
+            android:id="@+id/about_gushi"
+		    android:layout_width="80dip"
+		    android:layout_height="match_parent"
+		    android:background="@drawable/common_tab_bg"
+		    android:clickable="true"
+		    android:orientation="horizontal" 
+		    android:gravity="left" 
+		    android:layout_alignParentRight="true">
+			     
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical" 
+		        android:layout_marginRight="10dp"  
+		        android:textColor="#2d2d2d" 
+		        android:text="|" />
+	       	 <TextView
+	       	     android:id="@+id/ta_tv"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical" 
+		        android:layout_marginRight="5dp"  
+		        android:layout_centerVertical="true"
+		        android:textColor="#9e9e9e" 
+		        android:text="ta的相册" />
+		</LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <!-- 新增个人资料设置 -->
+  	 
+             <!-- 头像 -->
+            <RelativeLayout
+                    android:id="@+id/rl_user_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dip"
+                    android:background="@drawable/btn_bottom_selector"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="10dip"
+                        android:text="头像"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:typeface="serif" />
+
+                    <ImageView
+                        android:id="@+id/iv_userinfo_photo"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/default_avatar"
+                         />
+ 
+                </RelativeLayout>
+                <!--分割线 -->
+                 <TextView 
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="#E6E6E6" />
+                <!-- 昵称 -->
+                <RelativeLayout
+                    android:id="@+id/rl_user_nicheng"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/btn_bottom_selector"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="10dip"
+                        android:text="昵称"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:typeface="serif" />
+                     <TextView
+                        android:id="@+id/tv_userinfo_nicheng"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="10dip"
+                        android:text=""
+                        android:textColor="@color/btn_gray_pressed"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+ 
+                </RelativeLayout>
+            <!--分割线 -->
+                 <TextView 
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="#E6E6E6" />
+            <!-- 性别-->
+             <RelativeLayout
+               android:id="@+id/rl_user_xingbie"
+               android:layout_width="match_parent"
+               android:layout_height="50dip"
+               android:background="@drawable/btn_bottom_selector"
+               android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="10dip"
+                        android:text="性别"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:typeface="serif" />
+                    <TextView
+                        android:id="@+id/tv_userinfo_xingbie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="10dip"
+                        android:text=""
+                        android:textColor="@color/btn_gray_pressed"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+ 
+             </RelativeLayout>
+            <!--分割线 -->
+                 <TextView 
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="#E6E6E6" />
+           	<!-- 年龄-->
+             <RelativeLayout
+               android:id="@+id/rl_user_nianling"
+               android:layout_width="match_parent"
+               android:layout_height="50dip"
+               android:background="@drawable/btn_bottom_selector"
+               android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="10dip"
+                        android:text="年龄"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:typeface="serif" />
+                      <TextView
+                        android:id="@+id/tv_userinfo_nianling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="10dip"
+                        android:text=""
+                        android:textColor="@color/btn_gray_pressed"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+ 
+             </RelativeLayout>
+            <!--分割线 -->
+                 <TextView 
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="#E6E6E6" />
+           <!-- 地区-->
+             <RelativeLayout
+               android:id="@+id/rl_user_chengshi"
+               android:layout_width="match_parent"
+               android:layout_height="50dip"
+               android:background="@drawable/btn_bottom_selector"
+               android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="10dip"
+                        android:text="地区"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:typeface="serif" />
+                    <TextView
+                        android:id="@+id/tv_userinfo_chengshi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="10dip"
+                        android:text=""
+                        android:textColor="@color/btn_gray_pressed"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+ 
+             </RelativeLayout>
+          <!--分割线 -->
+                 <TextView 
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="#E6E6E6" />
+                 
+          <!--职业 -->       
+             <RelativeLayout
+               android:id="@+id/rl_userinfo_zhiye"
+               android:layout_width="match_parent"
+               android:layout_height="50dip"
+               android:background="@drawable/btn_bottom_selector"
+               android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="10dip"
+                        android:text="职业"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:typeface="serif" />
+                    <TextView
+                        android:id="@+id/tv_userinfo_zhiye"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="10dip"
+                        android:text=" "
+                        android:textColor="@color/btn_gray_pressed"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+ 
+             </RelativeLayout>
+           <!--分割线 -->
+                 <TextView 
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="#E6E6E6" />
+          <!--个性签名 -->       
+             <RelativeLayout
+               android:id="@+id/rl_userinfo_qianming"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/btn_bottom_selector"
+               android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/gxqm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       
+                        android:paddingLeft="10dip"
+                        android:text="个性签名"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:typeface="serif" />
+                    <TextView
+                        android:id="@+id/tv_userinfo_qianming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@id/gxqm"
+                        android:paddingLeft="10dip"
+                        android:gravity="right"
+                        android:text=" "
+                        android:textColor="@color/btn_gray_pressed"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+ 
+             </RelativeLayout>
+          <!--分割线 -->
+                 <TextView 
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="#E6E6E6" />
+          <!-- 动态-->
+             <RelativeLayout
+               android:id="@+id/rl_user_zainadongtai"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/btn_bottom_selector"
+               android:padding="10dip" >
+						
+                 <!-- android:layout_centerVertical="true" -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        
+                        android:paddingLeft="10dip"
+                        android:text="在哪"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:typeface="serif" />
+                    <TextView
+                        android:id="@+id/tv_userinfo_zainadongtai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="10dip"
+                        android:text=" "
+                        android:textColor="@color/btn_gray_pressed"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+ 
+             </RelativeLayout>  
+            
+
+            <!--
+                 <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="#E6E6E6" />
+            -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btn_huihua"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/button_register_bg"
+                    android:text="发起会话"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/btn_add_f"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/button_login_sina"
+                    android:text="加好友"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/btn_lahei"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/button_login_bg"
+                    android:text="加入黑名单"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/btn_jubao"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/button_login_bg"
+                    android:text="举报"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp" >
+
+    <ImageView
+        android:id="@+id/avator"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/empty_photo" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/avator"
+        android:textColor="#576B95"
+        android:textSize="13sp"
+        android:text="" />
+     <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentRight="true"
+        android:textColor="#818181"
+        android:textSize="13sp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/avator"
+        android:autoLink="web" />
+
+    <com.ccxt.whl.gushi.NoScrollGridView
+        android:id="@+id/gridView"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/avator"
+        android:horizontalSpacing="1dp"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:visibility="gone"  
+        android:verticalSpacing="1dp" 
+        />
+    
+    <TextView
+        android:id="@+id/zan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/avator"
+        android:gravity="right"
+        android:textColor="#576B95"
+        android:textSize="16sp"
+        android:text="♡赞" />
+
+</RelativeLayout>

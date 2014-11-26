@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context=".SplashActivity"
+    android:background="#fafafa" ><!-- D95555 -->
+
+	<!-- <TextView 
+	    android:id="@+id/logo_name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	    android:text="zaina"
+	    android:textColor="#32cfe0"
+	    android:textSize="36sp"
+	    android:drawableTop="@drawable/logo_uidemo"
+	    android:drawablePadding="8dp"
+	    />
+
+	<TextView 
+	    android:id="@+id/logo_text"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="8dip"
+	    android:text="五湖四海交朋友  万水千山觅知音"
+	    android:textColor="#ff7d87"
+	    android:textSize="16sp"
+	    /> -->
+
+  
+ 
+	<ImageView 
+	    android:id="@+id/logo_text"
+	    android:layout_width="214dp"
+	    android:layout_height="54dp"
+	    android:layout_centerInParent="true"  
+	    android:layout_marginBottom="8dip"
+	   android:src="@drawable/logo_text"
+	    />
+	  <ImageView
+        android:id="@+id/logo"
+        android:layout_width="114dip"
+        android:layout_height="114dip"
+        android:layout_centerHorizontal="true" 
+	    android:layout_above="@id/logo_text"
+        android:src="@drawable/logo_uidemo_x" />
+	  
+	  <ImageView 
+	    android:visibility="gone"
+        android:layout_width="160dip"
+        android:layout_height="100dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/sf_logo" />
+</RelativeLayout>

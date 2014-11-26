@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#404040" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/mm_title_back" />
+
+        <TextView
+            android:id="@+id/activity_selectimg_send"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:gravity="center"          
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:text="发布故事" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/activity_selectimg_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+ 			<!-- 故事输入框 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <TextView style="@style/long_lines_style" />
+
+                <EditText
+                    android:visibility="gone"
+                    android:id="@+id/comment_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:minHeight="300dp"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:textColor="#6F6F6F"
+                    android:textColorHint="#b9b9b9"
+                    android:hint="爱这里输入您的点点滴滴" >
+                </EditText>
+                 <EditText
+		            android:id="@+id/comment_content"
+		            android:layout_width="fill_parent"
+		            android:layout_height="match_parent"
+		            android:autoLink="web"
+		            android:background="#fff"
+		            android:gravity="left|top"
+		            android:imeOptions="actionDone"
+		            android:lineSpacingExtra="6.0dp"
+		            android:paddingLeft="10.0dp"
+		            android:paddingRight="10.0dp"
+		            android:paddingTop="10.0dp"
+		            android:textColorHint="#b9b9b9"
+		            android:hint="在这里输入您的点点滴滴"
+		            android:textColor="#5f5f5f"
+		            android:textSize="16.0sp" />
+            
+            </LinearLayout>
+            
+             <!-- 照片合集 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="110dp"
+                android:background="#eef1eff5" >
+
+                <HorizontalScrollView
+                    android:id="@+id/selectimg_horizontalScrollView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal" >
+
+                        <GridView
+                            android:id="@+id/noScrollgridview"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:fastScrollEnabled="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:horizontalSpacing="0dp"
+                            android:scrollbars="none"
+                            android:scrollingCache="false"
+                            android:stretchMode="spacingWidthUniform"
+                            android:verticalSpacing="1dp"
+                             android:numColumns="4" >
+                        </GridView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+		<!-- 故事发布按钮 
+            <LinearLayout
+                android:id="@+id/selectimg_relativeLayout_below"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#eef1eff5" />
+
+                <TextView style="@style/long_lines_style" />
+
+                <Button
+                    android:id="@+id/selectimg_bt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/bt_nobgd"
+                    android:gravity="center"
+                    android:text="提交故事点滴"
+                    android:textColor="#ff909a"
+                    android:textSize="20sp" />
+            </LinearLayout>-->
+            
+          
+            
+            <!-- 暂时未知 
+            <LinearLayout
+                android:id="@+id/selectimg_relativeLayout_below"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#eef1eff5" />
+
+                <TextView style="@style/long_lines_style" />
+
+                <Button
+                    android:id="@+id/selectimg_bt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/bt_nobgd"
+                    android:gravity="center"
+                    android:text="提交故事点滴"
+                    android:textColor="#ff909a"
+                    android:textSize="20sp" />
+            </LinearLayout>-->
+            
+            
+        </LinearLayout> 
+    </ScrollView>
+ 
+</LinearLayout>

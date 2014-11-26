@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ccxt.whl"
+    android:versionCode="13"
+    android:versionName="2.8" 
+    android:installLocation="preferExternal">
+<!--
+小型升级2.8 versionCode 13  //2014-11-8
+小型升级2.7 versionCode 12  //2014-10-22
+小型升级2.6 versionCode 11  //2014-10-11
+小型升级2.5 versionCode 10  //2014-10-08
+小型升级2.3 versionCode 9  //2014-09-29
+小型升级2.1 versionCode 7  //2014-09-24
+小型升级2.1 versionCode 7
+首发加故事的是2.0 versionCode 6，
+不加故事的最大是versionName 1.3 versionCode4-->
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+	
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    
+    <!-- Frontia框架的公共权限 -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <!-- FrontiaPush 和FrontiaStatistics 需要的权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission>
+    
+    <!-- <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    android:debuggable="false"-->
+    <application
+    	android:debuggable="false"
+        android:name="com.ccxt.whl.DemoApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_uidemo"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.ccxt.whl.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppStartLoadTranslucent"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 欢迎页 -->
+        <activity
+            android:name="com.ccxt.whl.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" /> 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 个人故事页 -->
+        <activity
+            android:name="com.ccxt.whl.gushi.User_gushi_Activity"
+            android:theme="@style/horizontal_slide">
+         </activity>
+        
+         <!-- 发布故事 -->
+        <activity
+            android:name="com.ccxt.whl.gushi.PublishActivity" 
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >           
+        </activity>
+        <!-- 发布故事添加图片item大图 -->
+        <activity
+            android:name="com.ccxt.whl.gushi.PhotoActivity" 
+            android:theme="@style/horizontal_slide" >           
+        </activity>
+        <!-- 点击显示故事item大图 -->
+        <activity
+            android:name="com.ccxt.whl.gushi.ImagePagerActivity"
+            android:theme="@style/horizontal_slide">
+            </activity>
+         <!-- 显示用户详情 -->
+        <activity
+            android:name="com.ccxt.whl.activity.Userinfo"
+            android:theme="@style/horizontal_slide">
+            </activity>
+        <!-- 显示大图 -->
+        <activity
+            android:name="com.ccxt.whl.activity.zai_showbigimage"
+            android:theme="@style/horizontal_slide">
+            </activity>
+          <!-- 登陆 -->
+        <activity
+            android:name="com.ccxt.whl.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" > 
+        </activity>
+
+        <!-- 注册 -->
+        <activity
+            android:name="com.ccxt.whl.activity.RegisterActivity"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 聊天页面 -->
+        <activity
+            android:name="com.ccxt.whl.activity.ChatActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <!-- 添加好友 -->
+        <activity
+            android:name="com.ccxt.whl.activity.AddContactActivity"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 群组详情 -->
+        <activity
+            android:name="com.ccxt.whl.activity.GroupDetailsActivity"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 群组列表 -->
+        <activity
+            android:name="com.ccxt.whl.activity.GroupsActivity"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 新建群组 -->
+        <activity
+            android:name="com.ccxt.whl.activity.NewGroupActivity"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 退出群组提示框 -->
+        <activity
+            android:name="com.ccxt.whl.activity.ExitGroupDialog"
+            android:theme="@style/MyDialogStyleBottom" >
+        </activity>
+        <!-- 群组选人 -->
+        <activity
+            android:name="com.ccxt.whl.activity.GroupPickContactsActivity"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 地图 -->
+        <activity
+            android:name="com.ccxt.whl.activity.BaiduMapActivity"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+
+        <!-- 新的朋友邀请消息页面 -->
+        <activity
+            android:name="com.ccxt.whl.activity.NewFriendsMsgActivity"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 转发消息用户列表页面 -->
+        <activity
+            android:name="com.ccxt.whl.activity.ForwardMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 自定义的contextmenu -->
+        <activity
+            android:name="com.ccxt.whl.activity.ContextMenu"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <!-- 自定义的alertdialog -->
+        <activity
+            android:name="com.ccxt.whl.activity.AlertDialog"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <!-- 显示下载大图页面 -->
+        <activity
+            android:name="com.ccxt.whl.activity.ShowBigImage"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 下载文件 -->
+        <activity
+            android:name="com.ccxt.whl.activity.ShowNormalFileActivity"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 黑名单 -->
+        <activity
+            android:name="com.ccxt.whl.activity.BlacklistActivity"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        
+        <!-- 公开的群聊列表 -->
+        <activity
+            android:name="com.ccxt.whl.activity.PublicGroupsActivity"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.ccxt.whl.activity.GroupSimpleDetailActivity"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <activity
+            android:name="com.ccxt.whl.activity.ShowVideoActivity"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <!-- choose video  -->
+        <activity android:name="com.ccxt.whl.activity.ImageGridActivity"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            >
+        </activity>
+        <activity android:name="com.ccxt.whl.activity.RecorderVideoActivity"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"
+            ></activity>
+        <!-- upload error log -->
+        <activity android:name="com.ccxt.whl.activity.DiagnoseActivity"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"
+            ></activity>
+
+        <!-- 开机自启动服务 -->
+        <receiver android:name="com.easemob.chat.StartServiceReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="ccxt#sandbox" />
+        <!-- 声明sdk所需的service -->
+        <service android:name="com.easemob.chat.EMChatService" />
+        
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        
+      
+         <!-- ChatDemoUI  使用友盟统计来收集crash report。这个不是环信sdk 的一部分 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="53fa9737fd98c585da0604ff" >
+        </meta-data>
+        <!--  end of 友盟声明 -->
+        
+    </application>
+
+</manifest>
