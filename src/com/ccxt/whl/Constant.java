@@ -54,7 +54,7 @@ public class Constant {
 	public static final String GUSHI_DEL = "gushi.php?action=d&"+VERSION;
 	//拉黑举报接口
     public static final String USER_BLACK = "userinfo.php?action=d&"+VERSION;
-  //拉黑举报接口
+  //获取更新信息接口
     public static final String CHECK_UPDATE = "update.php?action=c&"+VERSION;
 
 }
