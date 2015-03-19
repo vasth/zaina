@@ -31,3 +31,4 @@ widget  控件相关
 配置说明：百度社会化登录和统计
 文档说明http://developer.baidu.com/wiki/index.php?title=docs/frontia
 
+如果有什么问题可以到http://www.imgeek.org/forum.php?mod=viewthread&tid=663 这里来发帖子
