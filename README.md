@@ -32,3 +32,5 @@ widget  控件相关
 文档说明http://developer.baidu.com/wiki/index.php?title=docs/frontia
 
 如果有什么问题可以到http://www.imgeek.org/forum.php?mod=viewthread&tid=663 这里来发帖子
+
+服务器也开源啦！php_server文件夹里面包含php代码和相应的数据库代码
