@@ -16,10 +16,10 @@ Date: 2015-03-02 00:56:20
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for `black_copy`
+-- Table structure for `black`
 -- ----------------------------
-DROP TABLE IF EXISTS `black_copy`;
-CREATE TABLE `black_copy` (
+DROP TABLE IF EXISTS `black`;
+CREATE TABLE `black` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `umd5` varchar(255) DEFAULT NULL,
   `deviceid` varchar(255) DEFAULT NULL,
@@ -31,14 +31,14 @@ CREATE TABLE `black_copy` (
 ) ENGINE=MyISAM AUTO_INCREMENT=110 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of black_copy
+-- Records of black
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `db_error_copy`
+-- Table structure for `db_error`
 -- ----------------------------
-DROP TABLE IF EXISTS `db_error_copy`;
-CREATE TABLE `db_error_copy` (
+DROP TABLE IF EXISTS `db_error`;
+CREATE TABLE `db_error` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pagename` varchar(255) DEFAULT NULL,
   `errstr` varchar(255) DEFAULT NULL,
@@ -47,14 +47,14 @@ CREATE TABLE `db_error_copy` (
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of db_error_copy
+-- Records of db_error
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `db_qunfa_copy`
+-- Table structure for `db_qunfa`
 -- ----------------------------
-DROP TABLE IF EXISTS `db_qunfa_copy`;
-CREATE TABLE `db_qunfa_copy` (
+DROP TABLE IF EXISTS `db_qunfa`;
+CREATE TABLE `db_qunfa` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   `umd5` varchar(255) DEFAULT NULL,
@@ -63,14 +63,14 @@ CREATE TABLE `db_qunfa_copy` (
 ) ENGINE=MyISAM AUTO_INCREMENT=1733 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of db_qunfa_copy
+-- Records of db_qunfa
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `gushi_copy`
+-- Table structure for `gushi`
 -- ----------------------------
-DROP TABLE IF EXISTS `gushi_copy`;
-CREATE TABLE `gushi_copy` (
+DROP TABLE IF EXISTS `gushi`;
+CREATE TABLE `gushi` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `content` varchar(255) DEFAULT NULL COMMENT '发表内容',
   `jwd` varchar(255) DEFAULT NULL COMMENT '经纬度',
@@ -83,14 +83,14 @@ CREATE TABLE `gushi_copy` (
 ) ENGINE=MyISAM AUTO_INCREMENT=881 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of gushi_copy
+-- Records of gushi
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `login_log_copy`
+-- Table structure for `login_log`
 -- ----------------------------
-DROP TABLE IF EXISTS `login_log_copy`;
-CREATE TABLE `login_log_copy` (
+DROP TABLE IF EXISTS `login_log`;
+CREATE TABLE `login_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `umd5` varchar(255) DEFAULT NULL,
   `deviceid` varchar(255) DEFAULT NULL,
@@ -100,14 +100,14 @@ CREATE TABLE `login_log_copy` (
 ) ENGINE=MyISAM AUTO_INCREMENT=10651 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of login_log_copy
+-- Records of login_log
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `message_copy`
+-- Table structure for `message`
 -- ----------------------------
-DROP TABLE IF EXISTS `message_copy`;
-CREATE TABLE `message_copy` (
+DROP TABLE IF EXISTS `message`;
+CREATE TABLE `message` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `from` varchar(255) DEFAULT NULL,
   `to` varchar(255) DEFAULT NULL,
@@ -118,14 +118,14 @@ CREATE TABLE `message_copy` (
 ) ENGINE=MyISAM AUTO_INCREMENT=92980 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of message_copy
+-- Records of message
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `relasion_copy`
+-- Table structure for `relasion`
 -- ----------------------------
-DROP TABLE IF EXISTS `relasion_copy`;
-CREATE TABLE `relasion_copy` (
+DROP TABLE IF EXISTS `relasion`;
+CREATE TABLE `relasion` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `umd5` varchar(255) DEFAULT NULL,
   `umd5_fans` varchar(255) DEFAULT NULL,
@@ -133,14 +133,14 @@ CREATE TABLE `relasion_copy` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of relasion_copy
+-- Records of relasion
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `user_attr_copy`
+-- Table structure for `user_attr`
 -- ----------------------------
-DROP TABLE IF EXISTS `user_attr_copy`;
-CREATE TABLE `user_attr_copy` (
+DROP TABLE IF EXISTS `user_attr`;
+CREATE TABLE `user_attr` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `umd5` varchar(255) DEFAULT NULL,
   `deviceid` varchar(255) DEFAULT NULL,
@@ -150,14 +150,14 @@ CREATE TABLE `user_attr_copy` (
 ) ENGINE=MyISAM AUTO_INCREMENT=5330 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of user_attr_copy
+-- Records of user_attr
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `user_copy`
+-- Table structure for `user`
 -- ----------------------------
-DROP TABLE IF EXISTS `user_copy`;
-CREATE TABLE `user_copy` (
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   `pwd` varchar(255) DEFAULT NULL,
@@ -184,14 +184,14 @@ CREATE TABLE `user_copy` (
 ) ENGINE=MyISAM AUTO_INCREMENT=5995 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of user_copy
+-- Records of user
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `zaina_copy`
+-- Table structure for `zaina`
 -- ----------------------------
-DROP TABLE IF EXISTS `zaina_copy`;
-CREATE TABLE `zaina_copy` (
+DROP TABLE IF EXISTS `zaina`;
+CREATE TABLE `zaina` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `time` varchar(255) DEFAULT NULL,
   `ip` varchar(255) DEFAULT NULL,
@@ -205,14 +205,14 @@ CREATE TABLE `zaina_copy` (
 ) ENGINE=MyISAM AUTO_INCREMENT=22676 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of zaina_copy
+-- Records of zaina
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `zan_copy`
+-- Table structure for `zan`
 -- ----------------------------
-DROP TABLE IF EXISTS `zan_copy`;
-CREATE TABLE `zan_copy` (
+DROP TABLE IF EXISTS `zan`;
+CREATE TABLE `zan` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` varchar(255) DEFAULT NULL,
   `zan` varchar(255) DEFAULT NULL,
@@ -221,5 +221,5 @@ CREATE TABLE `zan_copy` (
 ) ENGINE=MyISAM AUTO_INCREMENT=808 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of zan_copy
+-- Records of zan
 -- ----------------------------
